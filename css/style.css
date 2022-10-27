@@ -42,6 +42,20 @@ body {
   font-family: var(--sans-serif);
 }
 
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
 .flex {
   display: flex;
 }
@@ -120,4 +134,39 @@ header>nav:hover .nav-dropdown {
 
 .navbar-logo {
   margin-right: 120px;
+}
+
+
+/* Hero Section */
+
+.hero {
+  background-image: url("../images/hero-area-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  min-height: 90vh;
+  width: 100%;
+}
+
+.hero-container {
+  max-width: 1400px;
+  margin-inline: auto;
+  min-height: 90vh;
+}
+
+.hero-content {
+  width: 40%;
+}
+
+.hero p {
+  font-family: var(--cursive);
+  color: var(--color-primary);
+  font-size: 36px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.hero h1 {
+  font-size: 70px;
+  margin-bottom: 1.8rem;
 }
