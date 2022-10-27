@@ -1,1 +1,14 @@
+/* Universal selector - it selects EVERY tag in the page. */
+*,
+*::before,
+*::after {
+  /* We set the default sizing behaviour */
+  box-sizing: border-box;
+}
 
+/*
+This won't work because box-sizing is not inherited by all tags.
+So this applies it only to the HTML tag, but it's children don't inherit it.
+html {
+  box-sizing: border-box;
+} */
