@@ -1,3 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@500;700&family=Yellowtail&display=swap");
+
+:root {
+  /* :root is like selecting the HTML tag, but has a higher specificity. */
+  /* Here we usually declare variables that we want to be available
+  everywhere in our CSS */
+
+  /* Convention: designers, when they create a brand/website
+  they define a primary, a secondary color, a dark color, a light color.*/
+  --color-primary: #7eb693;
+  --color-secondary: #efd372;
+  --color-dark: #274c5b;
+  --color-light: #f9f8f8;
+
+  /* And also, usually, warning, error & success colors to display feedbacks to the user. */
+
+  --body-font: "Open Sans", sans-serif;
+  --sans-serif: "Roboto", sans-serif;
+  --cursive: "Yellowtail", cursive;
+}
+
 /* Universal selector - it selects EVERY tag in the page. */
 *,
 *::before,
@@ -11,4 +32,68 @@ This won't work because box-sizing is not inherited by all tags.
 So this applies it only to the HTML tag, but it's children don't inherit it.
 html {
   box-sizing: border-box;
-} */
+}
+
+_______________________________________________   */
+
+body {
+  color: var(--color-dark);
+  font-family: var(--sans-serif);
+}
+
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  max-width: 1680px;
+}
+
+header {
+  width: 100%;
+  margin-inline: auto;
+  padding: 48px 30px;
+}
+
+header>.cart-button {
+  margin-left: auto;
+}
+
+header>nav>a {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--color-dark);
+  text-decoration: none;
+  margin-inline: 20px;
+}
+
+header>nav>a.selected-page {
+  color: var(--color-primary);
+}
+
+header>nav>a:hover {
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.navbar-logo {
+  margin-right: 120px;
+}
