@@ -8,7 +8,7 @@
   /* Convention: designers, when they create a brand/website
   they define a primary, a secondary color, a dark color, a light color.*/
   --color-primary: #7eb693;
-  --color-primary-light: #c4e5d0;
+  --color-primary-light: #eff6f1;
   --color-secondary: #efd372;
   --color-dark: #274c5b;
   --color-light: #f9f8f8;
@@ -106,7 +106,7 @@ header>nav a {
   font-weight: 500;
   color: var(--color-dark);
   text-decoration: none;
-  margin-inline: 20px;
+  padding: 20px;
 }
 
 header>nav>a.selected-page {
@@ -118,18 +118,26 @@ header>nav a:hover {
   cursor: pointer;
 }
 
-header>nav .nav-dropdown {
-  visibility: hidden;
-  position: absolute;
-  background-color: var(--color-primary-light);
-  padding: 20px 0px;
-  right: 140px;
-  top: 40px;
-  gap: 10px;
+header>nav .dropdown {
+  position: relative;
 }
 
-header>nav:hover .nav-dropdown {
-  visibility: visible;
+header>nav .dropdown-panel {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  background-color: var(--color-primary-light);
+  padding: 20px;
+  gap: 20px;
+  width: 200px;
+}
+
+header>nav .dropdown-panel>a {
+  padding: 0px;
+}
+
+header>nav .dropdown:hover .dropdown-panel {
+  display: flex;
 }
 
 .navbar-logo {

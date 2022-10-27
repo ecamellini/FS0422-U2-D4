@@ -16,19 +16,21 @@
   <div id="container">
     <header class="flex align-center">
       <img class="navbar-logo" src="images/organick-logo.svg" />
-      <nav class="relative">
+      <nav class="flex">
         <a class="selected-page">Home</a>
         <a>About Us</a>
         <a>Shop</a>
-        <a class="inline-flex align-center">
-          Pages
-          <img src="images/caret-down.svg" />
-        </a>
-        <div class="nav-dropdown flex-col">
-          <a>About Us</a>
-          <a>Careers</a>
-          <a>Services</a>
-          <a>Our Team</a>
+        <div class="dropdown">
+          <a class="inline-flex align-center">
+            Pages<img src="./images/caret-down.svg">
+          </a>
+          <div class="dropdown-panel">
+            <a>Services</a>
+            <a>About Us</a>
+            <a>Our Team</a>
+            <a>Careers</a>
+            <a>Blog</a>
+          </div>
         </div>
         <a>Contact Us</a>
       </nav>
